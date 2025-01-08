@@ -1,0 +1,177 @@
+what is a javascript?
+it is a object based programming language used to convert static page into dynamic page.
+
+DATATYPES:
+it is a value used in programming language
+*primitive datatypes:
+1.Number
+2. string
+3. boolean
+4. undefined
+5. null
+5. big-int
+*NOn Primitive:
+1. class
+2. object
+3.  array
+4. functions
+5. map
+6. sets
+
+SCOPES:
+global-SCOPES
+local-scope / script-scope
+block-scope
+
+OPERATORS:
+it is a pre defined symbol used to perform specific operation.
+1. arthematic operator(+,-,*,/,++,--)
+   increment:
+     post increment:
+         let a = 10;
+         console.log(a);//10
+         console.log(a++);//10
+         console.log(a++);/11
+    pre increment:
+         let b = 20;
+         console.log(b);//20
+         console.log(++b);//21
+    post decrement:
+         let c = 30;
+         console.log(c);//30
+         console.log(c--);//30
+         console.log(c--);//29
+    pre decrement:
+         let d = 40;
+         console.log(d);//40
+         console.log(--d);//39
+
+2. assignment operator(=,+=,-=,*=,/=)
+3. logical operator(and(&&),or(||),not(!))
+4. relational operator(==,!=,===,!==,>,<,>=,<=)
+    '==' will check only values but not the datatypes
+    '===' will check both values and datatypes
+    returns boolean
+
+5. ternary operator
+   -->three operands
+
+   Syntax:
+   (condition) ? value_if_true : value_if_false
+
+Conditional Statements:
+    0. Simple If:
+        The simple if is a condition which only accepts true statement
+            Syntax: 
+                if (condition) {
+                    // code to be executed if condition is true
+                    }
+    1. If-else statement
+        The if-else statement is used to execute a block of code if a condition is true or false.
+        syntax:
+            if (condition) {
+                // code to be executed if condition is true
+            } else {
+                // code to be executed if condition is false
+            }
+    2. If-elif-else statement
+        The if-elif-else statement is used to execute a block of code if a condition is tru or false.
+        syntax:
+            if (condition1) {
+                // code to be executed if condition1 is true
+            } else if (condition2) {
+                // code to be executed if condition2 is true
+            } else {
+                // code to be executed if condition1 and condition2 are false
+            }
+    3. Switch statement
+        The switch statement is used to execute a block of code based on the value of a variable.
+        syntax:
+            switch (expression) {
+                case value1:
+                    // code to be executed if expression is equal to value1
+                    break;
+                case value2:
+                    // code to be executed if expression is equal to value2
+                    break;
+                default:
+                    // code to be executed if expression is not equal to any of the values
+            }
+
+example:
+//else if ladder
+let a = 10;
+let b = 20;
+let c = 30;
+if(a>b && a>c){
+console.log("a is greater than b and c");
+}
+else if(b>a && b>c){
+console.log("b is greater than a and c");
+}
+else{
+console.log("c is greater than a and b");
+}
+
+//switch
+    let n=1
+    switch(n){
+    case 1:
+    console.log("sunday");
+    break;
+    case 2:
+    console.log("monday");
+    break;
+    case 3:
+    console.log("tuesday");
+    break;
+    default:
+        console.log("no match");
+    }
+
+looping Statements
+1. For loop
+        The for loop is used to execute a block of code repeatedly for a specified number of times.
+        syntax:
+            for (initialization; condition; increment/decrement) {
+                // code to be executed
+            }
+        Example for for loop:
+            for (let i = 0; i < 5; i++) {
+                console.log(i);
+            }
+    2. While loop
+        The while loop is used to execute a block of code repeatedly while a specified condition is true.
+        syntax:
+            while (condition) {
+                // code to be executed
+            }
+        Example for while loop:
+            let i = 0;
+                while (i < 5) {
+                    console.log(i);
+                    i++;
+                }
+    3. Do-while loop
+        The do-while loop is used to execute a block of code repeatedly while a specified condition is true
+        syntax:
+            do {
+                // code to be executed
+            } while (condition);
+        Example for do-while loop:
+            let i = 0;
+            do {
+                console.log(i);
+                i++;
+            } while (i < 5);
+    4. For-each loop:
+    The for-each loop is used to iterate over an array or an object.
+        syntax:
+            for (let variable of iterable) {
+                // code to be executed
+            }
+        Example for for-each loop:
+            let fruits = ["apple", "banana", "cherry"];
+            for (let fruit of fruits) {
+                console.log(fruit);
+            }

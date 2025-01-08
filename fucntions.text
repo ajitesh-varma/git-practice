@@ -1,0 +1,25 @@
+Functions in java script:
+functions are first citizens in java script
+functions are object in java script
+
+Types of functions in javascript:
+1. Function declaration statement or pure function or named function
+2. Function expression or anonymous function 
+3. higher order function,callback function
+4. arrow function
+5. nested function
+6. IIFE(Immediate invoking function expression)
+
+the main purpose of using functions in java script is code reusability.
+
+Q> Create a function it should perform arthematic operation for 2 numbers
+
+
+Assignment: write a function to find the largest of three numbers and the input will be given 
+from the end user.
+
+
+Function Expression:
+assinging function as a value ot one variable is called function expression.
+it is used to perform specific task.
+
