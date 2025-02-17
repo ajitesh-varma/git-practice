@@ -1,0 +1,235 @@
+REACT:
+--React is a library
+--it is used to develop single page web application
+--it is as component based application(reusable blocks)
+--React is declarative
+
+-->Before React - backbone.js and ember.js were used 
+--> 2013, facebook(meta) - react was introduced by jordan walke.
+
+--> React will render component on the web page without page reloading.
+--> React uses MVC acrchitecture(MVC=Model View Controler)
+
+--> React uses the diffing algorithm
+--> React uses Virtual DOM (Virtual DOM is a lightweight in-memory representation of the real DOM)
+
+how to create react app:
+two ways:
+1> CDN way
+2> node way
+
+a) npm
+--used to install, update, delete packages in js
+--packages will be installed globally
+
+npm install -g create-react-app
+create-react-app my-app
+
+b) npx
+-- used to execute packages without install
+--no need to install packages globally
+
+
+React folder structure
+-----------------------
+
+node_modules:-
+--> it will store aall packages and third party library.
+
+src folder:-
+--> it is main folder used for creating components.
+
+index.html file:
+--> it is a root file
+
+eslint(ecma script lint):-
+--> used for debug purpose
+
+
+components in react:-
+--------------------
+componets are basic building blocks in react.
+--> components are reusable.
+
+two-types:--
+-----------
+1> class based component:-
+--> it is es6 class in js
+--> it uses render() method
+  render() used to render elements/component on the web-page.
+--> it uses react-life-cycle.
+--> it is a stateful component.
+--> constructor is used to store data.
+--> it uses entend keyword.
+
+import React from 'react'
+class demo extend React.Component{
+    render(){
+     return <h1> iam class based component<h1>
+     }
+}
+export default demo;
+
+
+2> functional component/ presentational / dumb component:-
+--> it is js pure function.
+--> it does not use react-life-cycle.
+--> it is a stateless component.
+--> it does not uses any render method
+  after react 16.8, FBC(func based comp) becomes stateful component because of hooks.
+--> no need of using constructor and extend keyword.
+
+import React from 'react'
+function demo(){
+    return <h1> im FBC</h1>
+}export default demo1();
+
+--arrow func
+import React from 'react'
+let demo2 = () =>{
+return <h1> im FBC</h1>
+}export default demo2();
+
+
+Ways of writing HTML:
+---------------------
+
+1) html
+<h1> hello </h1>
+
+2) JS(DOM)
+let h1 = document.createElement('h1');
+h1.textContent = "hello";
+console.log(h1)
+
+3) React
+1>using React.createElement("tag-name", "null" pr {id : "demo"}" , "textContent")
+
+ex:-
+React.createElement("h1","null","hello")
+React.createElement("h1",{id : "demo"},"hello")
+React.createElement("h1",{id : "demo"},React.createElement("span","null","Hello"))
+
+2>using JSX(java-script XMl):
+1> 
+
+2>
+ if there are more than one element it should wrapped inside parent element
+or fragment.
+
+ex:
+<div>
+<h1>hello</h1>
+</div>
+
+--fragment is used to save memory in virtual DOM
+<>
+<h1>hello</h1>
+</>
+
+3> use {} brakets for writing expression.
+
+ex:
+<h1>{expression}</h1>
+<h1>{5+5}</h1>
+
+props in React:
+---------------
+--> props stands for properties.
+--> props are used to send the data from one component to another component.
+--> props are uni-direction
+--> props are immutable(read-only).
+--> props are object
+--> props are passed from parent to child component.
+
+
+HOMEWORK:
+//what is props drilling and how to avoid it
+//what is default props
+
+
+STATE IN REACT:
+----------------
+--> state is used to store the data in the same component and update the data in the same component
+--> state is mutable(read-write)
+
+syntax:- 
+
+let [initial-value,function] = useState(initial-value)
+----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+
+
+List and Keys in React:
+----------------------
+List is used to iterate an array of objest using map() method.
+Keys are used to keep track of an element, by using keys we can understand which element is created, updated and deleted.
+
+
+props drilling: sending a data from parent component to the child component
+and then sending the same data from child component to the grand child component.
+
+How to avoid props drilling:
+1. use context hook
+2. use Hoc(higher order comp)
+3. use Redux
+
+
+useContext hook in react(Important ra bossu):
+------------------------------
+--> useContext hook is used to share the data between the components.
+--> useContext hook is used to share data form one component to multiple component without pass an props
+--> useContext hook is used to avoid the props drilling.
+
+syntax:
+
+step 1:- creatte a context and export it
+
+import React from 'react'
+
+export var/let/const indentifier-name = React.createContext()
+
+step 2:- use provider to pass a value.
+
+import React from 'react'
+<identifier-name.provider value={}>
+    <Child component>
+</indentifier-name.provider>
+
+
+step 3:- use consumer to consume the value given by provider.
+
+<identifier-name.consumer>
+         {
+             cbf
+          }
+</identifier-name.consumer>
+
+
+UseEffect hook in React:
+------------------------
+--> it is used to provide side effect for function based component
+--> it is used to update the DOM or perform some other side effect after rendering the component
+-->in react we can tell to our component to do somthing after renders
+
+Advantages of UseEffect hook:
+-->used for updating DOM
+-->used for timer
+-->used for fetching data
+
+
+--> used to avoid react-life-cycle.
+--> we can avoid componentDidmount
+--> we can avoid componentDidupdate
+--> we can avoid componentWillUnmount
+
+syntax:
+import {useEffect} from 'react'
+
+useEffect((cbf,dependecy)
+
+
+Dependency of 3-ways:
+1. no dependency -- component will render infinite
+2. empty dependency -- component will render only once
+3. dependency with value(props,state) -- component will render when value changes

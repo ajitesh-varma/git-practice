@@ -1,4 +1,4 @@
-https://github.com/ajitesh-varma/git-practice.git
+git remote add origin https://github.com/ajitesh-varma/git-practice.git
 Step 1 :
     create account in github
 Step 2:

@@ -1,0 +1,40 @@
+ARRAYS IN JAVASCRIPT:
+it is used to store data of an different datatypes
+
+DECLARATION WAY:
+let arr = [1,2,"hello",1n,undefined];
+console.log(arr);
+
+USING NEW KEYWORD: 
+let arr1 = new Array(1,2,"hello",1n,undefined)
+console.log(arr1);
+
+-----------------------------------------------------------------------------------------
+OBJECT IN JAVASCRIPT:
+-->used to store data in the form of key and value pair.
+-->key is unique and value can be of any data type.
+
+DECLARATION WAY:
+let obj = {
+    name:"john",
+    age:25,
+    arr : [10,20,30],
+    demo : function(){
+        console.log("hello");
+    }
+}
+console.log(obj);
+console.log(obj.name);
+console.log(obj.demo);
+
+USING CONSTRUCTOR FUNCTION:
+-->used to create object
+function obj2(name,id){
+    this.name = name;
+    this.id = id;
+}
+let p1 = new obj2("KUMAR",1);
+console.log(p1);
+console.log(p1.name);
+console.log(p1.id);
+------------------------------------------------------------------------------------------

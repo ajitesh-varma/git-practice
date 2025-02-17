@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "name": "johnu",
+      "id": "1",
+      "role": "hero"
+    },
+    {
+      "id": "23",
+      "name": "sad",
+      "role": "das"
+    }
+  ]
+}

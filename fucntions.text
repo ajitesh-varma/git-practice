@@ -23,3 +23,142 @@ Function Expression:
 assinging function as a value ot one variable is called function expression.
 it is used to perform specific task.
 
+example:
+// let a = parseInt(prompt("Enter the first number"));
+// let b = parseInt(prompt("Enter the second number"));
+// let c = parseInt(prompt("Enter the third number"));
+// let operator = function(a,b,c){
+//     console.log(arguments);
+//     console.log(arguments[0]);
+//     console.log(arguments[1]);
+//     console.log(arguments[2]);
+      
+    
+// }
+// operator(a,b,c);
+
+
+Function programming:
+Higher Order function  and callback function:
+it is used to perform generic task(multiple tasks).
+it is used to perform task on the basis of the input given by the user.
+it can be created using function declaration statment or function expression or arrow function.
+
+ HOF(Higher Order Function):
+ a function which accepts another function as an argument is called HOF.
+ a function which returns another function is called HOF.
+     -->Callback Function:
+          a funtion  which parsed as an argument to higher order function.
+
+
+OWNER  ---->  SERVENT(HOF)  <-------paper/pen (task)
+                                     callback funtion
+CALLER        function
+
+EXAMPLE PROGRAMS USING HOF AND CB Function
+1.
+function main(a){
+    console.log(a);
+    console.log(a());
+        
+}
+main(function(){
+    return 'im aj'
+})
+main(function(){
+    return 'im aj2'
+})
+
+2.
+function main1(task){
+    console.log(task(20,30));
+}
+main1(function(a,b){
+    return a+b
+})
+main1(function(a,b){
+    return a-b
+})
+main1(function(a,b){
+    return a*b
+})
+
+-------------------------------------------------------------------------------------------
+ARROW FUNCTIONS:
+>it was introduced in a ES-6 version in 2015(ES:ECMA-SCRIPT)
+>it is used to reduce  no of lines in a code.
+
+>Two types of return
+1. implicit return arrow function
+2. explicit return arrow function
+------------------------------------------------------------------------------------------
+1.IMPLICIT ARROW FUNCTION:
+-->no need of using return keyword
+let a = () => console.log("Hello");           //"=>" - FAT ARROW
+console.log(a);
+console.log(a());
+------------------------------------------------------------------------------------------
+2.EXPLICIT ARROW FUNCTION:
+-->need of using return keyword
+let b = () => {return "hello"}
+console.log(b());
+console.log(b);
+
+ -----------------------------------------------------------------------------------------
+NESTED FUNCTION:
+A function inside another function is called nested function
+**lexical scope
+**closure                                            *variable state and functional state
+
+
+------------------------------------------------------------------------------------------
+IIFE (Immediate invoking function expression):
+-->it will be called immediately once function object is created.
+SYNTAX:-
+   (expression-function)()
+EXAMPLES:
+(function(){
+    console.log("HEllo")
+})();
+
+(() => {
+    console.log("Hello")
+})();
+
+((a,b) => {
+    console.log(a+b)
+})(10,10);
+
+(function demo(){
+    console.log("Hello-world")
+})();
+------------------------------------------------------------------------------------------
+
+ASYNCHRONOUS FUNCTION:
+--> making a way to run other function first
+
+two methos:
+--Settimeout(cbf, delay-time)
+--Setinterval(cbf, delay-time)
+
+function main(m,n){
+    setTimeout(() => {
+    for(let i=m; i<=n; i++){
+        console.log(i);
+    }
+    }, 5000)
+}main(1,10)
+
+function sample(){
+    console.log("no printed");
+}
+sample();
+
+PROMISE:
+--> promise is used to look after the asyn function
+-->a promise is an object
+3-PHASES:
+1. PENDING
+2. FULFILLED
+3. REJECTED
+
